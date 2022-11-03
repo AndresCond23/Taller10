@@ -3,9 +3,11 @@ package com.example.appcrud;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +38,20 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void irwhatsapp (View view){
+        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://wa.me/573176037008/"));
+        startActivity(i);
+    }
 
+    public void irfacebook (View view){
+        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/profile.php?id=100068488115559"));
+        startActivity(i);
+    }
+
+    public void irtwitter (View view){
+        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/andresconde23/"));
+        startActivity(i);
+    }
 
 }
 
